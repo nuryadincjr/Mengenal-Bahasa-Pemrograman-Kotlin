@@ -43,9 +43,37 @@ fun run(time : Int = 50, speed : String = "Kencang") {
     println("Simba lari sangat $speed dengan kecepatan $time")
 }
 
+fun isTooHot(temperatur: Int) = temperatur > 30
+fun isDirty(dirty: Int) = dirty > 20;
+fun isDay(day: String) = day == "Minggu"
+
+fun dirtySensor() = 20;
+
 fun bersihkanKandang(
     day: String,
     temperatur: Int = 30,
-    dirty: Int = 20) : Boolean {
-    return true
+    dirty: Int = dirtySensor()) : Boolean {
+    val isTooHot = temperatur > 30
+    val isDirty = dirty > 20
+    val isDay = day == "Minggu"
+
+    return when {
+        isTooHot(temperatur) -> true
+        isDirty -> true
+        isDay -> true
+        else -> false
+    }
 }
+
+//cara lain
+//fun bersihkanKandang(
+//    day: String,
+//    temperatur: Int = 30,
+//    dirty: Int = 20) : Boolean {
+//    return when {
+//        temperatur > 30 -> true
+//        dirty > 20 -> true
+//        day == "Minggu" -> true
+//        else -> false
+//    }
+//}
