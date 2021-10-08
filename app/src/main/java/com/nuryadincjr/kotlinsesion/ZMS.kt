@@ -8,7 +8,12 @@ fun main(args: Array<String>) {
     feedTheTuewlu()
     run(speed = "Lambat")
     dekorasi()
+    swim()
+    println(swiming(20));
 }
+
+val swim = { println("Berenang \n") }
+val swiming = { air: Int -> air/2}
 
 fun dekorasi() {
     val decoration = listOf("batu bata", "kayu ex", "kayu puspa")
