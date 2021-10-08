@@ -7,6 +7,16 @@ fun main(args: Array<String>) {
 
     feedTheTuewlu()
     run(speed = "Lambat")
+    dekorasi()
+}
+
+fun dekorasi() {
+    val decoration = listOf("batu bata", "kayu ex", "kayu puspa")
+    val decorationFilter = decoration.filter { it[0] == 'b' }
+    println(decorationFilter)
+
+    val decorationMap = decoration.map { println("map: $it") }
+    println("first: ${decorationMap.first()}")
 }
 
 fun feedTheTuewlu() {
@@ -64,16 +74,3 @@ fun bersihkanKandang(
         else -> false
     }
 }
-
-//cara lain
-//fun bersihkanKandang(
-//    day: String,
-//    temperatur: Int = 30,
-//    dirty: Int = 20) : Boolean {
-//    return when {
-//        temperatur > 30 -> true
-//        dirty > 20 -> true
-//        day == "Minggu" -> true
-//        else -> false
-//    }
-//}
