@@ -2,6 +2,7 @@ package com.nuryadincjr.kotlinsesion.kandang
 
 fun main(args: Array<String>) {
     buildKandang()
+    KandangTower().show()
 }
 
 fun buildKandang() {
