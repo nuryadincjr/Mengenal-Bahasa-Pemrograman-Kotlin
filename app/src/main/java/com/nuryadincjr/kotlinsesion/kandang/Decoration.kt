@@ -1,6 +1,6 @@
 package com.nuryadincjr.kotlinsesion.kandang
 
-fun main() {
+fun main(args: Array<String>) {
     makeDecoration()
 }
 fun makeDecoration() {
@@ -13,8 +13,8 @@ fun makeDecoration() {
     val dec3 = Decoration("Batu-Akik")
     println(dec3)
 
-    println(Decoration("Marmer").equals(Decoration("Marmer")))
-    println(dec2.equals(dec3))
+    println(Decoration("Marmer") == Decoration("Marmer"))
+    println(dec2 == dec3)
 
     val dec4 = dec3.copy()
     println(dec4)
@@ -29,10 +29,6 @@ fun makeDecoration() {
     println(grass)
 }
 
-data class Decoration(val rocks: String) {
+data class Decoration(val rocks: String)
 
-}
-
-data class DecorationNew(val rocks: String, val wood: String, val grass: String) {
-
-}
+data class DecorationNew(val rocks: String, val wood: String, val grass: String)
