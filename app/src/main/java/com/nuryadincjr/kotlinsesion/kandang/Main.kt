@@ -17,4 +17,11 @@ fun buildKandang() {
     println("Height: ${myKandang.height}")
 
     println("Volume: ${myKandang.volume()} Liter")
+
+    val smallKandang = Kandang(10, 20, 30)
+    println("Small Kandang: ${smallKandang.volume()} Liter")
+
+    val myKandang2 = Kandang(numberOfAnimals = 9)
+    println("Volume: ${myKandang2.volume()} Liter "
+    + "Length ${myKandang2.length} cm")
 }
