@@ -9,19 +9,15 @@ fun main() {
 
     println(valueInt)
     println(valueString)
+
+    myList<String>().isData<String>("Big data $valueString")
 }
 
-//class GenericClasses {
-//    fun get(Int): Int { return 0 }
-//}
-//
-//class mayShortList() {
-//    fun get(): Short { return 0}
-//}
-//
-//class myList<T> {
-//    fun addItem(T) {}
-//}
+class myList<T> {
+    fun<T> isData(Data: T) {
+        println("Show data $Data")
+    }
+}
 
 class Data<T>(val data: T)
 
